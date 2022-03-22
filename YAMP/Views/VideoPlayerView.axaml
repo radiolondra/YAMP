@@ -1,0 +1,81 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:YAMP.ViewModels"
+		xmlns:local="using:YAMP.Views"
+		xmlns:controls="using:YAMP.Controls"
+        xmlns:vlcsharp="clr-namespace:LibVLCSharp.Avalonia;assembly=LibVLCSharp.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="500"
+        x:Class="YAMP.Views.VideoPlayerView"
+        Width="500" Height="500"
+        WindowStartupLocation="CenterScreen"
+        TransparencyLevelHint="None"
+        ExtendClientAreaTitleBarHeightHint="999"
+        Background="{x:Null}"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaToDecorationsHint="True"
+        ShowInTaskbar="False"
+        FontFamily="avares://YAMP/Assets/Fonts#Lato"
+        CanResize="False"
+        Title="VideoPlayerView">
+  
+	<Panel Name="UpPanel">
+		<ExperimentalAcrylicBorder IsHitTestVisible="False">
+			<ExperimentalAcrylicBorder.Material>
+			<ExperimentalAcrylicMaterial
+				BackgroundSource="Digger"
+				TintColor="Black"
+				TintOpacity="1"          
+				MaterialOpacity="1"/>
+			</ExperimentalAcrylicBorder.Material>
+		</ExperimentalAcrylicBorder>
+
+		<Grid Margin="5,5,5,5" RowDefinitions="*" ColumnDefinitions="*">
+
+			<!-- Player Panel -->
+			<Panel				
+				Grid.Row="0"
+				Margin="0"				
+				Name="MPContainer"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				IsVisible="{Binding !IsStopped}">
+				
+				<vlcsharp:VideoView
+				  Name="Player"
+				  MediaPlayer="{Binding MediaPlayer}"
+				  VerticalAlignment="Stretch"
+				  HorizontalAlignment="Stretch">				  
+				</vlcsharp:VideoView>
+				
+			</Panel>
+
+			<!-- Thumbnail Panel -->
+			<Panel				
+				Grid.Row="0"
+				Margin="0"
+				IsVisible="{Binding IsStopped}"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch">
+				<Border 
+					CornerRadius="0" 
+					ClipToBounds="True">
+					<Panel
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						>
+						<Image 
+							Source="{Binding Cover}" 
+							Stretch="Uniform" />
+						<Panel IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}">
+							<PathIcon Height="75" Width="75" Data="{StaticResource video_regular}" />
+						</Panel>
+					</Panel>
+				</Border>
+			</Panel>
+			
+		</Grid>
+		<!-- Background="Transparent" in Border-Panel-->
+  </Panel>
+</Window>

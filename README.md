@@ -18,16 +18,22 @@ There is still a lot of work to do to get a stable result, but this is certainly
 
 Some "*goodies*" have been added, such as the use of [YT-DLP](https://github.com/yt-dlp/yt-dlp) to use videos from Youtube and other sites, generating links playable by **YAMP**.
 
-Your contribution is certainly welcome, in any form.
-
-
+**Your contribution is certainly welcome, in any form**.
 
 #### Quick Build Guide
 
 - **First of all get the solution**, in the way you prefere (download the zip, git clone, ...)
 
-- **FFMPeg** static builds are needed (x32 & x64). You can get them from [here](https://web.archive.org/web/20200918014242/https://ffmpeg.zeranoe.com/builds/) or from any other website you know. Choose Windows, 4.3.1 or greater, GPL versions for x32 and x64, download and extract them in the right subfolder (**iffx64** and **iffx32**) of **/bins** solution folder (<u>I said /bins, not /bin</u>).
+- **FFMPeg** static builds are needed (x32 & x64). 
+  
+  - You can get them from [here](https://web.archive.org/web/20200918014242/https://ffmpeg.zeranoe.com/builds/) or from any other website you know. Choose Windows, 4.3.1 or greater, GPL versions for x32 and x64, download and extract them in the right subfolder (**iffx64** and **iffx32**) of the **/bins** solution folder (<u>I said /bins, not /bin</u>).
 
-- **YT-DLP** latest release builds are needed (x32 and x64). You can get them from [here](https://github.com/yt-dlp/yt-dlp/releases). Extract the right version (x32 & x64) in the right subfolder (**iffx32** and **iffx64**) of **/bins** solution folder (<u>I said /bins, not /bin</u>).
+- **YT-DLP** latest release builds are needed (x32 and x64). 
+  
+  - You can get them from [here](https://github.com/yt-dlp/yt-dlp/releases). Extract the right version (x32 & x64) in the right subfolder (**iffx32** and **iffx64**) of the **/bins** solution folder (<u>I said /bins, not /bin</u>).
 
-Open the **YAMP** solution in **Visual Studio 2019** and build it.
+- Open the **YAMP** solution in **Visual Studio 2019**. 
+
+- In **/bins** folder, **iffx32** and **iffx64** subfolders, select all the executable files you should have there (ffmpeg, ffprobe, ffplay and yt-dlp) and, for each executable, in its "*Copy in output folder*" property choose "*Copy always*".
+
+- Build the solution.
