@@ -46,3 +46,6 @@ Some "*goodies*" have been added, such as the use of [YT-DLP](https://github.com
 - In **/bins** folder, **iffx32** and **iffx64** subfolders, select all the executable files you should have there (ffmpeg, ffprobe, ffplay and yt-dlp) and, for each executable, in its "*Copy in output folder*" property choose "*Copy always*".
 
 - Build the solution.
+
+#### Releases
+To test YAMP right away, you can download the setup [here](https://github.com/radiolondra/YAMP/releases).
