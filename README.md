@@ -1,13 +1,17 @@
 # YAMP
 
-### Yet Another Media Player
+[![YAMP](https://raw.githubusercontent.com/radiolondra/YAMP/main/YAMP/Assets/Y.png)](#readme)
 
+### Yet Another Media Player
 
 [![Commits](https://img.shields.io/github/commit-activity/m/radiolondra/YAMP?label=commits&style=for-the-badge)](https://github.com/radiolondra/YAMP/commits "Commit History")
 [![Last Commit](https://img.shields.io/github/last-commit/radiolondra/YAMP/main?label=&style=for-the-badge)](https://github.com/radiolondra/YAMP/commits "Commit History")
 [![Issues](https://img.shields.io/github/issues/radiolondra/YAMP?label=issues&style=for-the-badge)](https://github.com/radiolondra/YAMP/issues)
 
-In general, **YAMP** can play video and audio from local files or remote links, even from Youtube, Vimeo and other links.
+In general, **YAMP** can play video and audio from local files or remote links, even from Youtube, Vimeo and other web sites.  
+
+You can use its code as starting point and as reference to create more complex and advanced Media Players using Avalonia UI Framework and Videolan LibVlcSharp.
+
 
 #### Why YAMP?
 
