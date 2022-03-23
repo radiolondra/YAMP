@@ -2,6 +2,12 @@
 
 ### Yet Another Media Player
 
+
+[![Commits](https://img.shields.io/github/commit-activity/m/radiolondra/YAMP?label=commits&style=for-the-badge)](https://github.com/radiolondra/YAMP/commits "Commit History")
+[![Last Commit](https://img.shields.io/github/last-commit/radiolondra/YAMP/main?label=&style=for-the-badge)](https://github.com/radiolondra/YAMP/commits "Commit History")
+[![Issues](https://img.shields.io/github/issues/radiolondra/YAMP)]
+[![License: Unlicense](https://img.shields.io/badge/-Unlicense-brightgreen.svg?style=for-the-badge)](LICENSE "License")
+
 In general, **YAMP** can play video and audio from local files or remote links, even from Youtube, Vimeo and other links.
 
 #### Why YAMP?
@@ -12,9 +18,9 @@ Unlike the WPF version of LibVLCSharp, the Avalonia version is missing several t
 
 - Also it doesn't seem to be possible to add elements in a layer on top of *MediaPlayer*.
 
-**YAMP** tries to overcome this last drawback with tricks that still generate a decent result.
+**YAMP** tries to live together with those drawbacks and still generate an acceptable result.
 
-There is still a lot of work to do to get a stable result, but this is certainly a good starting point.
+There is still a lot of work to do to have a stable result, but this is certainly a good starting point.
 
 Some "*goodies*" have been added, such as the use of [YT-DLP](https://github.com/yt-dlp/yt-dlp) to use videos from Youtube and other sites, generating links playable by **YAMP**.
 
